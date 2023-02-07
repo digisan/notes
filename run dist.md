@@ -70,6 +70,6 @@ app.listen(port, () => console.log(`Listening on port ${port}`));
 
 For **ubuntu**, have to define in `/etc/hosts` server name for local ip: e.g. `127.0.0.1 mydomain www.mydomain.com mydomain.com`. If want to use domain to access site.
 
-And in `/etc/nginx/nginx.conf`, `user ***` => `user root`.
+Also, in `/etc/nginx/nginx.conf`, `user ***` => `user root`.
 
 
