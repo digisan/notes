@@ -72,7 +72,7 @@ For **ubuntu**, have to define in `/etc/hosts` server name for local ip: e.g. `1
 
 Also, in `/etc/nginx/nginx.conf`, `user ***` => `user root`.
 
-Under `/etc/nginx/sites-available`, create a file named `your-project`, input below config text with `sudo vim`. Then
+Under `/etc/nginx/sites-available`, create a file named `your-project`, refer to below config text with `sudo vim`. Then
 
 > sudo ln -s /etc/nginx/sites-available/your-project /etc/nginx/sites-enabled/
 
@@ -108,4 +108,19 @@ server {
 }
 ```
 
+```
+server {
+        server_name sub1.mywebsite.com;
+        location / {
+                proxy_pass http://localhost:xxxx;
+        }
+}
+
+server {
+        server_name sub2.mywebsite.com;
+        location / {
+                proxy_pass http://localhost:xxxx;
+        }
+}
+```
 
