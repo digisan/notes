@@ -72,4 +72,40 @@ For **ubuntu**, have to define in `/etc/hosts` server name for local ip: e.g. `1
 
 Also, in `/etc/nginx/nginx.conf`, `user ***` => `user root`.
 
+Under `/etc/nginx/sites-available`, create a file named `your-project`, input below config text with `sudo vim`. Then
+
+> sudo ln -s /etc/nginx/sites-available/your-project /etc/nginx/sites-enabled/
+
+> sudo nginx -t
+
+> sudo systemctl restart nginx.service
+
+```
+server {
+        listen  8080;
+        server_name sub1.domain.net;
+        charset  utf-8;
+        location / {
+                root /path/to/the/first/dist;
+                index index.html;
+                try_files $uri $uri/ /index.html;
+        }
+        error_log /path/to/the/error1.log;
+        access_log /path/to/the/access1.log;
+}
+
+server {
+        listen  8081;
+        server_name sub2.domain.net;
+        charset  utf-8;
+        location / {
+                root /path/to/the/second/dist;
+                index index.html;
+                try_files $uri $uri/ /index.html;
+        }
+        error_log /path/to/the/error2.log;
+        access_log /path/to/the/access2.log;
+}
+```
+
 
