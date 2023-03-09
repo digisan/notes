@@ -1,7 +1,11 @@
 ## install mongodb via docker
 
-1. > docker pull mongo
-2. > docker run -d --restart=always --name mongo-db -v ~/mongo/data:/data/db -p 27017:27017 mongo
+1. > `docker pull mongo`
+2. > `docker run -d --restart=always --name mongo-db -v ~/mongo/data:/data/db -p 27017:27017 mongo`
+
+### check mongodb is running
+
+> `sudo lsof -i -P -n | grep 27017`
 
 ## connect compass to remote server
 
