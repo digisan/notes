@@ -20,3 +20,7 @@
 e.g. `ssh -fN -l ubuntu -i ./ssh-key.pem -L 9999:localhost:27017 [remote public ip]`
 
 ssh with pem: `9999` is your local port mapped to remote port, localhost is remote 'localhost', `remote public ip` is remote public IP
+
+## misc
+
+If mongo container is running on VM, once the VM OS is suspended, mongodb cannot be accessed and must restart VM OS !
