@@ -23,7 +23,7 @@
 > `sudo lsof -i -P -n | grep some`
 
 ## resize linux /dev/sda
-> apt install parted
-> lsblk
-> parted /dev/sda resizepart 1 100%
-> resize2fs /dev/sda1 (resize2fs for ext4, xfs_growfs for XFS)
+> `apt install parted`
+> `lsblk`
+> `parted /dev/sda resizepart 1 100%`
+> `resize2fs /dev/sda1` (resize2fs for ext4, xfs_growfs for XFS)
