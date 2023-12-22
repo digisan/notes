@@ -27,3 +27,4 @@
 > `lsblk`
 > `parted /dev/sda resizepart 1 100%`
 > `resize2fs /dev/sda1` (resize2fs for ext4, xfs_growfs for XFS)
+> reboot
