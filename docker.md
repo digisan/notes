@@ -1,5 +1,9 @@
 ## docker engine install
 
+### in ubuntu or debian, just run `apt install docker.io`
+
+OR
+
 ### ubuntu version download from [dists](https://download.docker.com/linux/ubuntu/dists/)
 
 1. `lsb_release -a`, check ubuntu code name,
