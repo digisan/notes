@@ -66,11 +66,13 @@ app.use(express.static("dist"));
 app.listen(port, () => console.log(`Listening on port ${port}`));
 ```
 
-## Nginx 
+## On Client Access Via Domain: 
 
-For **ubuntu**, define in `/etc/hosts` server name for local ip: e.g. `127.0.0.1 mydomain www.mydomain.com mydomain.com`. If want to use domain to access site.
+For **ubuntu** Client, define in `/etc/hosts` server name for local ip: e.g. `127.0.0.1 mydomain www.mydomain.com mydomain.com`. If want to use domain to access site.
 
-For **windows** define in `C:\Windows\System32\drivers\etc\hosts` server name for ip. e.g. `192.168.31.149   data-dictionary.test`. If want to use domain to access site
+For **windows** Client, define in `C:\Windows\System32\drivers\etc\hosts` server name for ip. e.g. `192.168.31.149 data-dictionary.test`. If want to use domain to access site
+
+## Nginx Server Side:
 
 Also, in `/etc/nginx/nginx.conf`, `user ***` => `user root`.
 
